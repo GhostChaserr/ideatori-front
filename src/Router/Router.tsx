@@ -2,6 +2,8 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 import SignUp from 'pages/SignUp'
 import Home from 'pages/Home'
 import SignIn from 'pages/SignIn'
+import Private from './Private'
+import Profile from 'pages/Profile'
 
 const Links = () => {
   return (
@@ -21,6 +23,11 @@ const Links = () => {
           Signin
         </Link>
       </li>
+      <li>
+        <Link style={{ color: 'blue' }}  to='/profile'>
+          Profile
+        </Link>
+      </li>
     </ul>
   )
 }
@@ -31,8 +38,9 @@ const Router = () => {
       <Links/>
       <Switch>
         <Route path='/' exact={true} component={Home} />
-        <Route path='/signup' component={SignUp} />
-        <Route path='/signin' component={SignIn} />
+        <Private path='/profile' exact={true} component={Profile} />
+        <Route  path='/signup' component={SignUp} />
+        <Route  path='/signin' component={SignIn} />
       </Switch>
     </BrowserRouter>
   )
