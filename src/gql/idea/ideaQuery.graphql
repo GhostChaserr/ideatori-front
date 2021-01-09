@@ -1,0 +1,8 @@
+query idea($ideaId: ID!){
+  idea(ideaId: $ideaId) {
+    _id
+    name
+    summary
+    keywords
+  }
+}

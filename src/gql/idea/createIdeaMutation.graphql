@@ -1,0 +1,8 @@
+mutation createIdea($input: CreateIdeaInput!) {
+  createIdea(input: $input) {
+    _id
+    name
+    summary
+    keywords
+  }
+}

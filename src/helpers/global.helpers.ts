@@ -20,5 +20,10 @@ const formatErrors = (error: any): { message: string } => {
   return { message }
 }
 
-export default { formatErrors }
+const getKeywordsFromString = (keywords: string): string[] => {
+  let keywordsArr = keywords.split(',')
+  return keywordsArr = keywordsArr.map((keyword: string) => keyword.trim())
+}
+
+export default { formatErrors, getKeywordsFromString }
 

@@ -1,0 +1,16 @@
+query ideas($input: IdeasInput!) {
+  ideas(input: $input) {
+    page
+    total
+    limit
+    ideas {
+      _id
+      name
+      summary
+      keywords
+      author {
+        fullName
+      }
+    }
+  }
+}

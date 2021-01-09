@@ -4,6 +4,7 @@ import Home from 'pages/Home'
 import SignIn from 'pages/SignIn'
 import Private from './Private'
 import Profile from 'pages/Profile'
+import Ideas from 'pages/Ideas'
 
 const Links = () => {
   return (
@@ -28,6 +29,11 @@ const Links = () => {
           Profile
         </Link>
       </li>
+      <li>
+        <Link style={{ color: 'blue' }}  to='/ideas'>
+          Ideas
+        </Link>
+      </li>
     </ul>
   )
 }
@@ -38,6 +44,7 @@ const Router = () => {
       <Links/>
       <Switch>
         <Route path='/' exact={true} component={Home} />
+        <Route path='/ideas' component={Ideas} />
         <Private path='/profile' exact={true} component={Profile} />
         <Route  path='/signup' component={SignUp} />
         <Route  path='/signin' component={SignIn} />
